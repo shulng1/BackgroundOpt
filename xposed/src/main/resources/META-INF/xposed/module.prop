@@ -1,2 +1,6 @@
 minApiVersion=101
 targetApiVersion=101
+versionCode=1
+versionName=1.0
+author=BackgroundOpt
+description=Android后台优化模块

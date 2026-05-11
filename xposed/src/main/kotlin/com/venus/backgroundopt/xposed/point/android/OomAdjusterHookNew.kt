@@ -43,7 +43,7 @@ import com.venus.backgroundopt.xposed.util.reflect.callMethod
 import com.venus.backgroundopt.xposed.util.reflect.getIntFieldValue
 import com.venus.backgroundopt.xposed.util.reflect.getObjectFieldValue
 import com.venus.backgroundopt.xposed.util.reflect.replaceHook
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 
 /**

@@ -29,7 +29,7 @@ import com.venus.backgroundopt.common.util.message.NULL_FLAG
 import com.venus.backgroundopt.common.util.parseObject
 import com.venus.backgroundopt.common.util.runCatchThrowable
 import com.venus.backgroundopt.xposed.core.RunningInfo
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 import java.io.ObjectInputStream
 import java.io.ObjectOutputStream
 import java.io.Serializable

@@ -16,12 +16,14 @@
  */
 
 package com.venus.backgroundopt.xposed.util.preference
+
 import com.venus.backgroundopt.common.util.convertValueToTargetType
 import com.venus.backgroundopt.common.util.log.logError
 import com.venus.backgroundopt.common.util.parseObject
 import com.venus.backgroundopt.xposed.BuildConfig
-import de.robv.android.xposed.XSharedPreferences
-import de.robv.android.xposed.XposedBridge
+import com.venus.backgroundopt.xposed.bridge.XSharedPreferences
+import com.venus.backgroundopt.xposed.bridge.XposedBridge
+import java.io.File
 
 /**
  * @author XingC
@@ -35,7 +37,7 @@ object PreferencesUtil {
      * @return
      */
     fun getPref(path: String): XSharedPreferences? {
-        val pref = XSharedPreferences(BuildConfig.APPLICATION_ID, path)
+        val pref = XSharedPreferences(File(path))
         return if (pref.file.canRead()) pref else {
             XposedBridge.log("${BuildConfig.APPLICATION_ID}: 配置文件不可读(将使用默认配置)!文件: $path")
             null

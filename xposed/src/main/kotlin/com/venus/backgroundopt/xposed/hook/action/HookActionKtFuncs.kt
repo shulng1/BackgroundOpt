@@ -23,7 +23,7 @@ import com.venus.backgroundopt.xposed.hook.base.action.AfterHookAction
 import com.venus.backgroundopt.xposed.hook.base.action.BeforeHookAction
 import com.venus.backgroundopt.xposed.hook.base.action.DoNotingHookAction
 import com.venus.backgroundopt.xposed.hook.base.action.ReplacementHookAction
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 fun beforeHookAction(action: (p: MethodHookParam) -> Any?): BeforeHookAction {
     return BeforeHookAction { param ->

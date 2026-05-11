@@ -20,7 +20,7 @@
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam;
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam;
 
 /**
  * @author XingC

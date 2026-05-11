@@ -24,7 +24,7 @@ import com.venus.backgroundopt.xposed.entity.android.android.os.Process
 import com.venus.backgroundopt.xposed.hook.base.HookPoint
 import com.venus.backgroundopt.xposed.hook.base.MethodHook
 import com.venus.backgroundopt.xposed.manager.process.ProcessManager
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * @author XingC

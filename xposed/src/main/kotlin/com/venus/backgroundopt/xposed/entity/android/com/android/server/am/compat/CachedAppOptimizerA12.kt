@@ -24,7 +24,7 @@ import com.venus.backgroundopt.xposed.entity.android.com.android.server.am.ICach
 import com.venus.backgroundopt.xposed.hook.constants.FieldConstants
 import com.venus.backgroundopt.xposed.hook.constants.MethodConstants
 import com.venus.backgroundopt.xposed.util.reflect.callMethod
-import de.robv.android.xposed.XposedHelpers
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers
 
 /**
  * @author XingC

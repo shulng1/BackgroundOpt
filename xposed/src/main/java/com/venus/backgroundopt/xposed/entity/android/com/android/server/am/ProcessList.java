@@ -33,7 +33,7 @@ import com.venus.backgroundopt.xposed.util.reflect.ReflectUtilsKt;
 import java.nio.ByteBuffer;
 import java.util.List;
 
-import de.robv.android.xposed.XposedHelpers;
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers;
 
 /**
  * 封装了{@link ClassConstants#ProcessList}

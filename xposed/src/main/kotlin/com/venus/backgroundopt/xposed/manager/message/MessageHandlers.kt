@@ -46,7 +46,7 @@ import com.venus.backgroundopt.xposed.manager.message.handle.RunningAppInfoMessa
 import com.venus.backgroundopt.xposed.manager.message.handle.RunningProcessListMessageHandler
 import com.venus.backgroundopt.xposed.manager.message.handle.SimpleLmkMessageHandler
 import com.venus.backgroundopt.xposed.manager.message.handle.SubProcessOomConfigChangeMessageHandler
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * @author XingC

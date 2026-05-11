@@ -29,7 +29,7 @@ import com.venus.backgroundopt.xposed.hook.constants.MethodConstants
 import com.venus.backgroundopt.xposed.manager.application.DefaultApplicationManager
 import com.venus.backgroundopt.xposed.util.reflect.afterHook
 import com.venus.backgroundopt.xposed.util.reflect.beforeHook
-import de.robv.android.xposed.XC_MethodHook
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook
 
 /**
  * @author XingC

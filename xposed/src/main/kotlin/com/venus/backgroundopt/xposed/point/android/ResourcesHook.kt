@@ -24,7 +24,7 @@ import com.venus.backgroundopt.xposed.hook.base.HookPoint
 import com.venus.backgroundopt.xposed.hook.base.MethodHook
 import com.venus.backgroundopt.xposed.hook.constants.ClassConstants
 import com.venus.backgroundopt.xposed.hook.constants.MethodConstants
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * @author XingC

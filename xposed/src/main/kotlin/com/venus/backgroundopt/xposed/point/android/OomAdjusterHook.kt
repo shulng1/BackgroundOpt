@@ -22,7 +22,7 @@ import com.venus.backgroundopt.xposed.core.RunningInfo
 import com.venus.backgroundopt.xposed.entity.android.com.android.server.am.ProcessRecord
 import com.venus.backgroundopt.xposed.hook.base.HookPoint
 import com.venus.backgroundopt.xposed.hook.base.MethodHook
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * @author XingC

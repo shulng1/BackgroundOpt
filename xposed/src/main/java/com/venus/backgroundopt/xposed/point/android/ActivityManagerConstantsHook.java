@@ -33,8 +33,8 @@ import com.venus.backgroundopt.xposed.hook.constants.MethodConstants;
 
 import java.util.Objects;
 
-import de.robv.android.xposed.XC_MethodHook;
-import de.robv.android.xposed.XposedHelpers;
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook;
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers;
 
 /**
  * @author XingC

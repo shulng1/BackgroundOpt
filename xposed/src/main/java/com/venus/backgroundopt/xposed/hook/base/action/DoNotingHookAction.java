@@ -20,7 +20,7 @@
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import de.robv.android.xposed.XC_MethodHook;
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook;
 
 /**
  * 无作为

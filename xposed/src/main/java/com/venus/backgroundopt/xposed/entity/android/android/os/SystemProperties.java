@@ -22,7 +22,7 @@ import com.venus.backgroundopt.xposed.BuildConfig;
 import com.venus.backgroundopt.xposed.hook.constants.ClassConstants;
 import com.venus.backgroundopt.xposed.hook.constants.MethodConstants;
 
-import de.robv.android.xposed.XposedHelpers;
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers;
 
 /**
  * @author XingC

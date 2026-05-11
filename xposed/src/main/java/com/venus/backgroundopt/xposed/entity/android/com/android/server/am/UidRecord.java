@@ -20,7 +20,7 @@ package com.venus.backgroundopt.xposed.entity.android.com.android.server.am;
 import com.venus.backgroundopt.xposed.annotation.OriginalObject;
 import com.venus.backgroundopt.xposed.hook.constants.ClassConstants;
 
-import de.robv.android.xposed.XposedHelpers;
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers;
 
 /**
  * @author XingC

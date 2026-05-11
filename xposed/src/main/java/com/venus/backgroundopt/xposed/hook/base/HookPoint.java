@@ -21,6 +21,10 @@ import androidx.annotation.NonNull;
 
 import com.venus.backgroundopt.common.environment.CommonProperties;
 import com.venus.backgroundopt.common.util.log.ILogger;
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers;
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook;
+import com.venus.backgroundopt.xposed.bridge.XC_MethodReplacement;
+import com.venus.backgroundopt.xposed.bridge.hookAllMethods;
 import com.venus.backgroundopt.xposed.hook.base.action.AfterHookAction;
 import com.venus.backgroundopt.xposed.hook.base.action.BeforeHookAction;
 import com.venus.backgroundopt.xposed.hook.base.action.DoNotingHookAction;
@@ -36,16 +40,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import de.robv.android.xposed.XC_MethodHook;
-import de.robv.android.xposed.XC_MethodReplacement;
-import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedHelpers;
-
-/**
- * @author XingC
- * @version 1.0
- * @date 2023/4/27
- */
 public class HookPoint implements ILogger {
     public static final Set<String> dontPrintLogHookList = new HashSet<>() {
         {
@@ -66,25 +60,10 @@ public class HookPoint implements ILogger {
 
     private boolean enableHook = true;
 
-    /**
-     * hook构造器
-     *
-     * @param className   类全限定名
-     * @param hookActions hook后的具体执行
-     * @param actionArgs  参数
-     */
     public HookPoint(@NotNull String className, HookAction[] hookActions, Object... actionArgs) {
         this(className, className, hookActions, actionArgs);
     }
 
-    /**
-     * hook普通方法
-     *
-     * @param className   类全限定名
-     * @param methodName  要hook的方法
-     * @param hookActions hook后的具体执行
-     * @param actionArgs  参数
-     */
     public HookPoint(@NotNull String className, String methodName, HookAction[] hookActions, Object... actionArgs) {
         this.className = className;
         this.methodName = methodName;
@@ -119,7 +98,7 @@ public class HookPoint implements ILogger {
                 XposedHelpers.findAndHookConstructor(hookClassName, classLoader, this.getFinalArgs(hookAction));
             } else {
                 if (hookAllMatchedMethod) {
-                    Set<XC_MethodHook.Unhook> unhookSet = XposedBridge.hookAllMethods(
+                    Set<XC_MethodHook.Unhook> unhookSet = hookAllMethods(
                             XposedHelpers.findClass(hookClassName, classLoader),
                             hookMethodName,
                             this.getFinalXCMethodHook(hookAction)
@@ -137,10 +116,6 @@ public class HookPoint implements ILogger {
                     }
                 }
             }
-
-            /*if (!dontPrintLogHookList.contains(hookClassName + "." + hookMethodName)) {
-                getLogger().info("[" + hookClassName + "." + hookMethodName + "]hook成功");
-            }*/
         } catch (Throwable t) {
             if (!dontPrintLogHookList.contains(hookClassName + "." + hookMethodName)) {
                 getLogger().error("[" + hookClassName + "." + hookMethodName + "]hook失败", t);
@@ -149,11 +124,8 @@ public class HookPoint implements ILogger {
     }
 
     private Object[] getFinalArgs(HookAction hookAction) {
-        // 处理hook方法的参数类型
         List<Object> params = new ArrayList<>(Arrays.asList(this.getActionArgs()));
-        // 将动作方法添加到hook方法传参数类型中
         params.add(getFinalXCMethodHook(hookAction));
-
         return params.toArray();
     }
 

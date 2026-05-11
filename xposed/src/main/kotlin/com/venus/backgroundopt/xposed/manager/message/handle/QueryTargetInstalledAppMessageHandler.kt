@@ -21,7 +21,7 @@ import com.venus.backgroundopt.common.entity.message.QueryInstalledAppParam
 import com.venus.backgroundopt.xposed.core.RunningInfo
 import com.venus.backgroundopt.xposed.manager.message.MessageHandler
 import com.venus.backgroundopt.xposed.manager.message.createJsonResponse
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * 根据给定的值, 查询匹配的app

@@ -25,7 +25,7 @@ import com.venus.backgroundopt.xposed.entity.android.com.android.server.am.Proce
 import com.venus.backgroundopt.xposed.environment.HookCommonProperties
 import com.venus.backgroundopt.xposed.manager.message.MessageHandler
 import com.venus.backgroundopt.xposed.manager.message.createResponse
-import de.robv.android.xposed.XC_MethodHook
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook
 
 /**
  * 子进程OOM配置修改的消息处理器

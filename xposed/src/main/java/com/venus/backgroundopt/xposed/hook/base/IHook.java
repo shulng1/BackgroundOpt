@@ -31,7 +31,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import de.robv.android.xposed.XC_MethodHook;
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook;
 
 /**
  * @author XingC

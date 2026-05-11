@@ -20,7 +20,7 @@ package com.venus.backgroundopt.xposed.manager.message.handle
 import com.venus.backgroundopt.xposed.core.RunningInfo
 import com.venus.backgroundopt.xposed.manager.message.MessageHandler
 import com.venus.backgroundopt.xposed.manager.message.createResponse
-import de.robv.android.xposed.XC_MethodHook
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook
 
 /**
  * @author XingC

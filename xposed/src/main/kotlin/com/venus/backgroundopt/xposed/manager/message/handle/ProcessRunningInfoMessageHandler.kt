@@ -21,7 +21,7 @@ import com.venus.backgroundopt.common.entity.message.ProcessRunningInfo
 import com.venus.backgroundopt.xposed.core.RunningInfo
 import com.venus.backgroundopt.xposed.manager.message.MessageHandler
 import com.venus.backgroundopt.xposed.manager.message.createJsonResponse
-import de.robv.android.xposed.XC_MethodHook
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook
 
 /**
  * @author XingC

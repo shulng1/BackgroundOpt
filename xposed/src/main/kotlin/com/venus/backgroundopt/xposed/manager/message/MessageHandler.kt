@@ -19,7 +19,7 @@ package com.venus.backgroundopt.xposed.manager.message
 
 import com.venus.backgroundopt.common.util.log.ILogger
 import com.venus.backgroundopt.xposed.core.RunningInfo
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * 信息处理接口

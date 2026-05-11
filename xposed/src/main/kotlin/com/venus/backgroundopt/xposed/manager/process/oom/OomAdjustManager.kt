@@ -34,7 +34,7 @@ import com.venus.backgroundopt.xposed.entity.self.AppInfo
 import com.venus.backgroundopt.xposed.environment.HookCommonProperties
 import com.venus.backgroundopt.xposed.manager.process.oom.OomAdjHandler.Companion.ADJ_TASK_PRIORITY_NORMAL
 import com.venus.backgroundopt.xposed.point.android.function.ActivitySwitchHook
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * @author XingC

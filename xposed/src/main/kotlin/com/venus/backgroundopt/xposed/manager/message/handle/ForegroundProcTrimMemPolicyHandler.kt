@@ -22,7 +22,7 @@ import com.venus.backgroundopt.xposed.core.RunningInfo
 import com.venus.backgroundopt.xposed.environment.HookCommonProperties
 import com.venus.backgroundopt.xposed.manager.message.MessageHandler
 import com.venus.backgroundopt.xposed.manager.message.createResponse
-import de.robv.android.xposed.XC_MethodHook
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook
 
 /**
  * 配置前台进程内存紧张策略

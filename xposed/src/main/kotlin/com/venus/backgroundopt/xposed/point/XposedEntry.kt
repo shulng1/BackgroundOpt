@@ -18,6 +18,7 @@
 package com.venus.backgroundopt.xposed.point
 
 import com.venus.backgroundopt.xposed.BuildConfig
+import com.venus.backgroundopt.xposed.bridge.XposedBridge
 import com.venus.backgroundopt.xposed.point.handler.AndroidHookHandler
 import com.venus.backgroundopt.xposed.point.handler.PowerKeeperHookHandler
 import com.venus.backgroundopt.xposed.point.handler.SelfHookHandler
@@ -28,6 +29,10 @@ class XposedEntry(
     exposedInterface: XposedModuleInterface,
     param: XposedModuleInterface.ModuleLoadedParam
 ) : XposedModule(exposedInterface, param) {
+
+    init {
+        XposedBridge.init(param, exposedInterface)
+    }
 
     override fun onPackageLoaded(param: XposedModuleInterface.PackageLoadedParam) {
         when (param.packageName) {

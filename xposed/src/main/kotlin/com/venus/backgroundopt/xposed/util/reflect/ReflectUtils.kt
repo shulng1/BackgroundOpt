@@ -21,11 +21,11 @@ import com.venus.backgroundopt.common.util.log.logError
 import com.venus.backgroundopt.common.util.runCatchThrowable
 import com.venus.backgroundopt.xposed.hook.base.HookPoint
 import com.venus.backgroundopt.xposed.hook.base.IHook
-import de.robv.android.xposed.XC_MethodHook
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
-import de.robv.android.xposed.XC_MethodReplacement
-import de.robv.android.xposed.XposedBridge
-import de.robv.android.xposed.XposedHelpers
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodReplacement
+import com.venus.backgroundopt.xposed.bridge.XposedBridge
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers
 
 /**
  * @author XingC

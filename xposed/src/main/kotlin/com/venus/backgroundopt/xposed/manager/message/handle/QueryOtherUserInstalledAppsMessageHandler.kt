@@ -5,7 +5,7 @@ import com.venus.backgroundopt.common.util.UserUtils
 import com.venus.backgroundopt.xposed.core.RunningInfo
 import com.venus.backgroundopt.xposed.manager.message.MessageHandler
 import com.venus.backgroundopt.xposed.manager.message.createJsonResponse
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * 查找其他用户([UserUtils.MAIN_USER]之外的用户)安装的app

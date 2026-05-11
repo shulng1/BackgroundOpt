@@ -30,8 +30,8 @@ import com.venus.backgroundopt.xposed.hook.constants.FieldConstants
 import com.venus.backgroundopt.xposed.hook.constants.MethodConstants
 import com.venus.backgroundopt.xposed.hook.effectiveHookFlagMaker
 import com.venus.backgroundopt.xposed.hook.generateHookPoint
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
-import de.robv.android.xposed.XposedHelpers
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers
 
 /**
  * @author XingC

@@ -21,7 +21,7 @@ import com.venus.backgroundopt.xposed.core.RunningInfo
 import com.venus.backgroundopt.xposed.hook.constants.ClassConstants
 import com.venus.backgroundopt.xposed.hook.constants.FieldConstants
 import com.venus.backgroundopt.xposed.hook.constants.MethodConstants
-import de.robv.android.xposed.XposedHelpers
+import com.venus.backgroundopt.xposed.bridge.XposedHelpers
 
 /**
  * 封装了安卓的[ClassConstants.MemoryStatUtil]

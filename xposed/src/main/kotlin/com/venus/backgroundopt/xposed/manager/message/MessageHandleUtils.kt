@@ -20,7 +20,7 @@ package com.venus.backgroundopt.xposed.manager.message
 import com.venus.backgroundopt.common.util.log.logError
 import com.venus.backgroundopt.common.util.parseObject
 import com.venus.backgroundopt.common.util.toJsonString
-import de.robv.android.xposed.XC_MethodHook.MethodHookParam
+import com.venus.backgroundopt.xposed.bridge.XC_MethodHook.MethodHookParam
 
 /**
  * @author XingC
