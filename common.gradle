@@ -83,7 +83,7 @@ ext {
     kotlinJvmTarget = JavaVersion.VERSION_21.toString()
 
     /* Xposed */
-    xposedApiVersion = '82'
+    xposedApiVersion = '101'
     xposedApiDependenceStr = 'de.robv.android.xposed:api:' + xposedApiVersion
     xposedSourceDependenceStr = 'de.robv.android.xposed:api:' + xposedApiVersion + ':sources'
 
