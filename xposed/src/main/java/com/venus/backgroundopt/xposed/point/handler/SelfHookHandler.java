@@ -20,20 +20,16 @@ package com.venus.backgroundopt.xposed.point.handler;
 import com.venus.backgroundopt.xposed.hook.base.PackageHook;
 import com.venus.backgroundopt.xposed.point.self.ModuleActiveStateHook;
 
-import de.robv.android.xposed.callbacks.XC_LoadPackage;
+import io.github.libxposed.api.XposedModuleInterface;
 
-/**
- * @author XingC
- * @date 2023/9/29
- */
 public class SelfHookHandler extends PackageHook {
-    public SelfHookHandler(XC_LoadPackage.LoadPackageParam packageParam) {
+    public SelfHookHandler(XposedModuleInterface.PackageLoadedParam packageParam) {
         super(packageParam);
     }
 
     @Override
-    public void hook(XC_LoadPackage.LoadPackageParam packageParam) {
-        ClassLoader classLoader = packageParam.classLoader;
+    public void hook(XposedModuleInterface.PackageLoadedParam packageParam) {
+        ClassLoader classLoader = packageParam.getClassLoader();
         new ModuleActiveStateHook(classLoader);
     }
 }

@@ -21,22 +21,19 @@ import com.venus.backgroundopt.xposed.BuildConfig
 import com.venus.backgroundopt.xposed.point.handler.AndroidHookHandler
 import com.venus.backgroundopt.xposed.point.handler.PowerKeeperHookHandler
 import com.venus.backgroundopt.xposed.point.handler.SelfHookHandler
-import de.robv.android.xposed.IXposedHookLoadPackage
-import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam
+import io.github.libxposed.api.XposedModule
+import io.github.libxposed.api.XposedModuleInterface
 
-/**
- * @author XingC
- * @date 2024/8/17
- */
-class XposedEntry : IXposedHookLoadPackage {
-    @Throws(Throwable::class)
-    override fun handleLoadPackage(lpparam: LoadPackageParam?) {
-        when (lpparam?.packageName) {
-            "android" -> AndroidHookHandler(lpparam)
-            // miui 电量与性能
-            "com.miui.powerkeeper" -> PowerKeeperHookHandler(lpparam)
-            // 自己
-            BuildConfig.APPLICATION_ID -> SelfHookHandler(lpparam)
+class XposedEntry(
+    exposedInterface: XposedModuleInterface,
+    param: XposedModuleInterface.ModuleLoadedParam
+) : XposedModule(exposedInterface, param) {
+
+    override fun onPackageLoaded(param: XposedModuleInterface.PackageLoadedParam) {
+        when (param.packageName) {
+            "android" -> AndroidHookHandler(param)
+            "com.miui.powerkeeper" -> PowerKeeperHookHandler(param)
+            BuildConfig.APPLICATION_ID -> SelfHookHandler(param)
         }
     }
 }

@@ -21,21 +21,19 @@ import com.venus.backgroundopt.common.util.log.ILogger;
 import com.venus.backgroundopt.xposed.annotation.HookPackageName;
 import com.venus.backgroundopt.xposed.entity.android.android.os.SystemProperties;
 
-import de.robv.android.xposed.callbacks.XC_LoadPackage;
+import io.github.libxposed.api.XposedModuleInterface;
 
-/**
- * @author XingC
- * @version 1.0
- * @date 2023/2/8
- */
 public abstract class PackageHook implements ILogger {
 
-    public PackageHook(XC_LoadPackage.LoadPackageParam packageParam) {
-        // 环境
-        SystemProperties.loadSystemPropertiesClazz(packageParam.classLoader);
+    private final XposedModuleInterface.PackageLoadedParam packageParam;
 
-        // hook
-        hook(packageParam);
+    public PackageHook(XposedModuleInterface.PackageLoadedParam packageParam) {
+        this.packageParam = packageParam;
+        SystemProperties.loadSystemPropertiesClazz(packageParam.getClassLoader());
+    }
+
+    public XposedModuleInterface.PackageLoadedParam getPackageParam() {
+        return packageParam;
     }
 
     public static String getTargetPackageName(Class<?> aClass) {
@@ -49,5 +47,5 @@ public abstract class PackageHook implements ILogger {
         return hookPackageName;
     }
 
-    public abstract void hook(XC_LoadPackage.LoadPackageParam packageParam);
+    public abstract void hook(XposedModuleInterface.PackageLoadedParam packageParam);
 }

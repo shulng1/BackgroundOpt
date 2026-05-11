@@ -22,22 +22,16 @@ import com.venus.backgroundopt.xposed.point.miui.PowerStateMachineHook;
 import com.venus.backgroundopt.xposed.point.miui.ProcessManagerHook;
 import com.venus.backgroundopt.xposed.point.miui.SleepModeControllerNewHook;
 
-import de.robv.android.xposed.callbacks.XC_LoadPackage;
+import io.github.libxposed.api.XposedModuleInterface;
 
-/**
- * @author XingC
- * @version 1.0
- * @date 2023/2/17
- */
-//@HookPackageName("com.miui.powerkeeper")
 public class PowerKeeperHookHandler extends PackageHook {
-    public PowerKeeperHookHandler(XC_LoadPackage.LoadPackageParam packageParam) {
+    public PowerKeeperHookHandler(XposedModuleInterface.PackageLoadedParam packageParam) {
         super(packageParam);
     }
 
     @Override
-    public void hook(XC_LoadPackage.LoadPackageParam packageParam) {
-        ClassLoader classLoader = packageParam.classLoader;
+    public void hook(XposedModuleInterface.PackageLoadedParam packageParam) {
+        ClassLoader classLoader = packageParam.getClassLoader();
 
         new PowerStateMachineHook(classLoader);
         new ProcessManagerHook(classLoader);
